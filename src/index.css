@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+    --color-primary: #020617;
+    --color-secondary: #2563eb;
+    --color-accent: #10b981;
+    --color-background: #f8fafc;
+    --color-text: #1e293b;
+}
+
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: "Inter", sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: "Manrope", sans-serif; }
+button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+::selection { background: #2563eb; color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
