@@ -1,26 +1,25 @@
-import login from '../assets/images/solutions/hospital/login.png';
-import register from '../assets/images/solutions/hospital/register.png';
-import patientmain from '../assets/images/solutions/hospital/patientmain.png';
-import registerPatient from '../assets/images/solutions/hospital/registerPatient.png';
-import staff from '../assets/images/solutions/hospital/staff.png';
-import report from '../assets/images/solutions/hospital/report.png';
-import registerreport from '../assets/images/solutions/hospital/registerreport.png';
-import registerPrescription from '../assets/images/solutions/hospital/registerPrescription.png';
-import prescription from '../assets/images/solutions/hospital/prescription.png';
-import dashboard1 from '../assets/images/solutions/hospital/dashboard1.png';
+import login from '../assets/images/solutions/hospital/login.webp';
+import register from '../assets/images/solutions/hospital/register.webp';
+import patientmain from '../assets/images/solutions/hospital/patientmain.webp';
+import registerPatient from '../assets/images/solutions/hospital/registerPatient.webp';
+import staff from '../assets/images/solutions/hospital/staff.webp';
+import registerreport from '../assets/images/solutions/hospital/registerreport.webp';
+import registerPrescription from '../assets/images/solutions/hospital/registerPrescription.webp';
+import prescription from '../assets/images/solutions/hospital/prescription.webp';
+import dashboard1 from '../assets/images/solutions/hospital/dashboard1.webp';
 
 
-import hostelLogin from '../assets/images/solutions/hostel/hostelLogin.png';
-import hostelRegisterAdmin from '../assets/images/solutions/hostel/hostelRegisterAdmin.png';
-import hostelDashboard from '../assets/images/solutions/hostel/hostelDashboard.png';
-import hostelApproveRegistration from '../assets/images/solutions/hostel/hostelApproveRegistration.png';
-import hostelViewRegisteredStudents from '../assets/images/solutions/hostel/hostelViewRegisteredStudents.png';
+import hostelLogin from '../assets/images/solutions/hostel/hostelLogin.webp';
+import hostelRegisterAdmin from '../assets/images/solutions/hostel/hostelRegisterAdmin.webp';
+import hostelDashboard from '../assets/images/solutions/hostel/hostelDashboard.webp';
+import hostelApproveRegistration from '../assets/images/solutions/hostel/hostelApproveRegistration.webp';
+import hostelViewRegisteredStudents from '../assets/images/solutions/hostel/hostelViewRegisteredStudents.webp';
 
-import rentalLogin from '../assets/images/solutions/rental/rentalLogin.png';
-import rentalRegister from '../assets/images/solutions/rental/rentalRegister.png';
-import rentalDashboard from '../assets/images/solutions/rental/rentalDashboard.png';
-import rentalAddHouse from '../assets/images/solutions/rental/rentalAddHouse.png';
-import rentalViewAddedHouses from '../assets/images/solutions/rental/rentalViewAddedHouses.png';
+import rentalLogin from '../assets/images/solutions/rental/rentalLogin.webp';
+import rentalRegister from '../assets/images/solutions/rental/rentalRegister.webp';
+import rentalDashboard from '../assets/images/solutions/rental/rentalDashboard.webp';
+import rentalAddHouse from '../assets/images/solutions/rental/rentalAddHouse.webp';
+import rentalViewAddedHouses from '../assets/images/solutions/rental/rentalViewAddedHouses.webp';
 
 const solutions = [
 

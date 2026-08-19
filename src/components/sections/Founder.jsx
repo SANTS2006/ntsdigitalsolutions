@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import founder from "../../data/founder";
-import founderImg from "../../assets/images/founder/founderImg.jpeg";
+import founderImg from "../../assets/images/founder/founderImg.webp";
 
 function Founder() {
     return (
@@ -11,7 +11,7 @@ function Founder() {
                 <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative mx-auto w-full max-w-sm">
                     <div className="absolute -inset-3 rounded-[2rem] bg-blue-100" />
                     <div className="relative overflow-hidden rounded-[2rem] bg-slate-100">
-                        <img src={founderImg} alt={founder.name} loading="lazy" className="aspect-[4/5] w-full object-cover" />
+                        <img src={founderImg} alt={founder.name} loading="lazy" decoding="async" className="aspect-[4/5] w-full object-cover" />
                     </div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>

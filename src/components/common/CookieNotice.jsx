@@ -1,2 +1,35 @@
-import { useEffect, useState } from 'react';
-export default function CookieNotice(){const [show,setShow]=useState(false);useEffect(()=>setShow(localStorage.getItem('nts-cookie-choice')!=='accepted'),[]);if(!show)return null;return <div className="fixed bottom-4 left-4 right-4 z-[90] mx-auto max-w-2xl rounded-2xl border border-slate-200 bg-white p-5 shadow-2xl"><p className="text-sm leading-6 text-slate-600">This website may use essential browser storage for preferences and form drafts. We do not ask you to submit passwords or sensitive credentials through public forms.</p><button onClick={()=>{localStorage.setItem('nts-cookie-choice','accepted');setShow(false)}} className="mt-4 rounded-xl bg-slate-950 px-4 py-2 text-sm font-bold text-white">Got it</button></div>}
+import { useState } from 'react';
+
+export default function CookieNotice() {
+  const [show, setShow] = useState(() => {
+    try {
+      return localStorage.getItem('nts-cookie-choice') !== 'accepted';
+    } catch {
+      return false;
+    }
+  });
+
+  if (!show) return null;
+
+  return (
+    <div className="fixed bottom-4 left-4 right-4 z-[90] mx-auto max-w-2xl rounded-2xl border border-slate-200 bg-white p-5 shadow-2xl">
+      <p className="text-sm leading-6 text-slate-600">
+        This website may use essential browser storage for preferences and form drafts. We do not ask you to submit passwords or sensitive credentials through public forms.
+      </p>
+      <button
+        type="button"
+        onClick={() => {
+          try {
+            localStorage.setItem('nts-cookie-choice', 'accepted');
+          } catch {
+            // Storage may be unavailable; the notice can still be dismissed.
+          }
+          setShow(false);
+        }}
+        className="mt-4 rounded-xl bg-slate-950 px-4 py-2 text-sm font-bold text-white"
+      >
+        Got it
+      </button>
+    </div>
+  );
+}

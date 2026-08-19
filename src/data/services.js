@@ -1,5 +1,4 @@
 import { FaCode, FaMobileAlt, FaPaintBrush, FaLaptopCode, FaTools   } from "react-icons/fa";
-import { MdOutlineSettingsSuggest } from "react-icons/md";
 
 const services = [
 

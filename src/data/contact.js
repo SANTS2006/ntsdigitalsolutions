@@ -8,7 +8,7 @@ const contactInfo = [
 
         title: "Location",
 
-        value: "137 British Road, New London, Jui",
+        value: "Based in Freetown, Sierra Leone",
 
         icon: FaMapMarkerAlt
 
@@ -32,7 +32,7 @@ const contactInfo = [
 
         title: "Phone",
 
-        value: "+232 76 784 684",
+        value: "031034604",
 
         icon: FaPhone
 
