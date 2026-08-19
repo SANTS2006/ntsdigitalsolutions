@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
     --color-primary: #020617;
@@ -7,23 +8,122 @@
     --color-accent: #10b981;
     --color-background: #f8fafc;
     --color-text: #1e293b;
+    color-scheme: light;
 }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+    background: var(--color-background);
+}
+
 body {
     margin: 0;
+    min-width: 320px;
     background: var(--color-background);
     color: var(--color-text);
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    transition: background-color 180ms ease, color 180ms ease;
 }
 
-h1, h2, h3, h4, h5, h6 { font-family: "Manrope", sans-serif; }
-button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
-::selection { background: #2563eb; color: #fff; }
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Manrope", "Inter", ui-sans-serif, system-ui, sans-serif;
+}
 
+button, a, input, select, textarea {
+    -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+    background: #2563eb;
+    color: #fff;
+}
+
+/* Theme-aware form controls and common surfaces. */
+.dark {
+    color-scheme: dark;
+    --color-background: #020617;
+    --color-text: #e2e8f0;
+}
+
+.dark body {
+    background: #020617;
+    color: #e2e8f0;
+}
+
+.dark .bg-white { background-color: #0f172a; }
+.dark .bg-slate-50 { background-color: #0b1220; }
+.dark .bg-slate-100 { background-color: #111827; }
+.dark .bg-slate-200 { background-color: #1e293b; }
+.dark .bg-slate-300 { background-color: #334155; }
+
+.dark .text-slate-950 { color: #f8fafc; }
+.dark .text-slate-900 { color: #f1f5f9; }
+.dark .text-slate-800 { color: #e2e8f0; }
+.dark .text-slate-700 { color: #cbd5e1; }
+.dark .text-slate-600 { color: #94a3b8; }
+.dark .text-slate-500 { color: #64748b; }
+.dark .text-slate-400 { color: #94a3b8; }
+
+.dark .border-slate-200 { border-color: #263449; }
+.dark .border-slate-300 { border-color: #334155; }
+.dark .border-slate-100 { border-color: #1e293b; }
+
+.dark .hover\:bg-slate-50:hover { background-color: #111827; }
+.dark .hover\:bg-slate-100:hover { background-color: #1e293b; }
+.dark .hover\:text-slate-950:hover { color: #fff; }
+
+.dark input,
+.dark select,
+.dark textarea {
+    background-color: #0f172a;
+    color: #e2e8f0;
+    border-color: #334155;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+    color: #64748b;
+}
+
+.dark select option {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+.dark .shadow-xl,
+.dark .shadow-2xl {
+    --tw-shadow-color: rgb(0 0 0 / 0.35);
+}
+
+/* Keep large brand-dark surfaces intentionally dark in both themes. */
+.dark .bg-slate-950 {
+    background-color: #020617;
+}
+
+/* Prevent animated theme changes from affecting reduced-motion users. */
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.dark .bg-blue-50 { background-color: rgb(30 58 138 / 0.28); }
+.dark .bg-blue-100 { background-color: rgb(30 64 175 / 0.22); }
+.dark .bg-emerald-50 { background-color: rgb(6 78 59 / 0.28); }
+.dark .bg-red-50 { background-color: rgb(127 29 29 / 0.24); }
+.dark .text-emerald-800 { color: #a7f3d0; }
+.dark .border-emerald-200 { border-color: rgb(16 185 129 / 0.35); }
+.dark .border-red-200 { border-color: rgb(248 113 113 / 0.35); }
+.dark .border-blue-200 { border-color: rgb(96 165 250 / 0.35); }
+
+/* Defer rendering work for content that is below the initial viewport. */
+.content-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 700px;
 }

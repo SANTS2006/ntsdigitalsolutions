@@ -36,9 +36,34 @@
       crossorigin
     />
 
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+    />
+
     <title>
       NTS Digital Solutions | Empowering Businesses Through Digital Innovation
     </title>
+
+    <script>
+      (() => {
+        try {
+          const saved = localStorage.getItem('nts-theme');
+          const theme = saved === 'dark' || saved === 'light'
+            ? saved
+            : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.classList.toggle('dark', theme === 'dark');
+          document.documentElement.style.colorScheme = theme;
+        } catch {
+          // Fall back to the browser default if storage is unavailable.
+        }
+      })();
+    </script>
   </head>
 
   <body>
