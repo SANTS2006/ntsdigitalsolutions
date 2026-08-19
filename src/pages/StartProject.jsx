@@ -22,7 +22,6 @@ const steps = [
           'Custom Software',
           'Mobile Application',
           'UI/UX Design',
-          'API & Backend',
           'Maintenance & Support',
           'Not sure yet',
         ],
