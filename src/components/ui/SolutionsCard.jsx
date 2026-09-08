@@ -37,6 +37,12 @@ function SolutionsCard({
 
                     loading="lazy"
 
+                    width="800"
+
+                    height="600"
+
+                    decoding="async"
+
                     className="w-full h-full object-cover"
 
                 />

@@ -17,10 +17,10 @@ export default function Hero() {
         loop
         playsInline
         preload="metadata"
-        poster="/nts-hero-poster.jpg"
+        poster="/nts-hero-poster.webp"
         aria-hidden="true"
       >
-        <source src="/nts-hero.mp4" type="video/mp4" />
+        <source src="/nts-hero.mp4" type="video/mp4" media="(min-width: 768px)" />
       </video>
 
       <div className="absolute inset-0 bg-black/60" aria-hidden="true" />

@@ -17,6 +17,7 @@ export default function Navbar() {
   const { isDark, toggleTheme } = useTheme();
   const location = useLocation();
   const isHome = location.pathname === '/';
+  const mobileNavId = 'nts-mobile-navigation';
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : '';
@@ -82,7 +83,11 @@ export default function Navbar() {
         <Logo />
 
         <div
-          className="hidden items-center gap-5 rounded-2xl border border-black/10 bg-transparent px-3 py-2 shadow-sm transition-all duration-500 md:flex dark:border-white/10"
+          className={`nts-nav-glass hidden items-center gap-5 rounded-2xl border px-3 py-2 shadow-lg transition-all duration-500 backdrop-blur-xl backdrop-saturate-150 md:flex ${
+            lightModeHeroText || isDark
+              ? 'border-white/15 bg-black/25'
+              : 'border-black/10 bg-white/55'
+          }`}
         >
           {links.map(([label, to]) => (
             <NavLink key={to} to={to} end={to === '/'} className={styles}>
@@ -113,6 +118,7 @@ export default function Navbar() {
           onClick={() => setIsOpen(v => !v)}
           aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
           aria-expanded={isOpen}
+          aria-controls={mobileNavId}
           className={`rounded-xl border p-2 text-2xl shadow-sm transition-colors duration-300 md:hidden ${
             lightModeHeroText || isDark
               ? 'border-white/20 text-white hover:bg-white/10'
@@ -124,7 +130,14 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`overflow-hidden border-t border-black/10 bg-transparent shadow-xl transition-[max-height,opacity] duration-300 md:hidden dark:border-white/10 ${
+        id={mobileNavId}
+        aria-hidden={!isOpen}
+        inert={!isOpen}
+        className={`nts-nav-glass overflow-hidden border-t shadow-xl backdrop-blur-xl backdrop-saturate-150 transition-[max-height,opacity] duration-300 md:hidden ${
+          lightModeHeroText || isDark
+            ? 'border-white/10 bg-black/35'
+            : 'border-black/10 bg-white/65'
+        } ${
           isOpen ? 'max-h-[85vh] opacity-100' : 'max-h-0 border-t-transparent opacity-0'
         }`}
       >

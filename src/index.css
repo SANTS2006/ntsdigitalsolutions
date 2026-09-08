@@ -343,7 +343,6 @@ button,a,input,select,textarea {
 }
 
 /* Fixed transparent navigation + video hero accessibility */
-header { will-change: transform; }
 @media (prefers-reduced-motion: reduce) {
     .hero-video { display: none; }
 }
@@ -464,5 +463,26 @@ header { will-change: transform; }
     .nts-loader-ring,
     .nts-page-loader {
         animation: none;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE NAV GLASS
+   Softly blurs content behind navigation on all viewports.
+   ========================================================= */
+.nts-nav-glass {
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+    backdrop-filter: blur(18px) saturate(150%);
+    transform: translateZ(0);
+}
+@supports not ((backdrop-filter: blur(1px))) {
+    .nts-nav-glass {
+        background-color: rgba(8, 20, 45, .92);
+    }
+}
+@media (prefers-reduced-transparency: reduce) {
+    .nts-nav-glass {
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
     }
 }

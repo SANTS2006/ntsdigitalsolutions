@@ -35,7 +35,7 @@ export default function SiteSearch() {
         type="button"
         aria-label="Search site"
         onClick={() => setOpen(true)}
-        className="rounded-lg p-2 text-xl text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800"
+        className="rounded-lg p-2 text-xl text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-[#111]"
       >
         <FiSearch />
       </button>
@@ -56,7 +56,7 @@ export default function SiteSearch() {
                 type="button"
                 onClick={close}
                 aria-label="Close search"
-                className="rounded-lg p-2 text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+                className="rounded-lg p-2 text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-[#111]"
               >
                 <FiX />
               </button>
@@ -68,7 +68,7 @@ export default function SiteSearch() {
                   onClick={close}
                   key={to}
                   to={to}
-                  className="block rounded-2xl p-4 hover:bg-slate-50 dark:hover:bg-slate-800"
+                  className="block rounded-2xl p-4 hover:bg-slate-50 dark:hover:bg-[#111]"
                 >
                   <div className="font-extrabold text-slate-950 dark:text-white">{label}</div>
                   <div className="text-sm text-slate-500">{desc}</div>
