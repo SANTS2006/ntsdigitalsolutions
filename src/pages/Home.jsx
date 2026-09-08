@@ -7,6 +7,7 @@ import WhyChoose from '../components/sections/WhyChoose';
 import DevelopmentProcess from '../components/sections/DevelopmentProcess';
 import SecuritySection from '../components/sections/SecuritySection';
 import InsightsPreview from '../components/sections/InsightsPreview';
+import MobileAppDownload from '../components/sections/MobileAppDownload';
 import Testimonials from '../components/sections/Testimonials';
 import Founder from '../components/sections/Founder';
 import CTA from '../components/sections/CTA';
@@ -33,6 +34,7 @@ export default function Home() {
         <Founder />
         <Testimonials />
         <InsightsPreview />
+        <MobileAppDownload />
         <CTA />
       </div>
     </>
