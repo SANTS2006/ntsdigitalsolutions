@@ -29,7 +29,7 @@ export default function MobileAppDownload({ compact = false }) {
             href={ANDROID_DOWNLOAD_URL}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 font-bold text-[#0637c9] shadow-xl transition duration-300 hover:-translate-y-1 hover:bg-slate-50 sm:w-auto"
+            className="brand-gradient inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 font-bold text-[#ffffff] shadow-xl transition duration-300 hover:-translate-y-1 hover:bg-slate-50 sm:w-auto"
             aria-label="Download the NTS Digital Solutions Android app"
           >
             <FiDownload aria-hidden="true" />
