@@ -194,7 +194,7 @@ export default function StartProject() {
       />
 
       {/* Hero */}
-      <section className="bg-slate-950 py-20 text-white">
+      <section className="nts-page-hero relative overflow-hidden bg-white text-slate-950 dark:bg-black dark:text-white">
         <div className="mx-auto max-w-4xl px-5 text-center">
           <p className="text-xs font-bold uppercase tracking-[.2em] text-blue-400">
             Start a project
@@ -236,7 +236,7 @@ export default function StartProject() {
 
               <a
                 href="/"
-                className="mt-7 inline-flex rounded-xl bg-slate-950 px-5 py-3 font-bold text-white transition hover:bg-slate-800"
+                className="mt-7 inline-flex rounded-xl bg-white dark:bg-black px-5 py-3 font-bold text-white transition hover:bg-slate-800"
               >
                 Back to Home
               </a>
@@ -266,7 +266,7 @@ export default function StartProject() {
 
                 <div className="mt-3 h-2 overflow-hidden rounded-full bg-slate-100">
                   <div
-                    className="h-full rounded-full bg-blue-600 transition-all duration-500"
+                    className="h-full rounded-full brand-gradient transition-all duration-500"
                     style={{
                       width: `${((step + 1) / steps.length) * 100}%`,
                     }}
@@ -371,7 +371,7 @@ export default function StartProject() {
                   <button
                     type="button"
                     onClick={next}
-                    className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-3 font-bold text-white transition hover:bg-blue-700"
+                    className="inline-flex items-center gap-2 rounded-xl brand-gradient px-5 py-3 font-bold text-white transition"
                   >
                     Continue
                     <FiArrowRight />
@@ -380,7 +380,7 @@ export default function StartProject() {
                   <button
                     type="submit"
                     disabled={sending}
-                    className="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-5 py-3 font-bold text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-70"
+                    className="brand-gradient inline-flex items-center gap-2 rounded-xl px-5 py-3 font-bold text-white brand-shadow transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
                   >
                     {sending ? (
                       <>

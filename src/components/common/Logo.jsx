@@ -7,8 +7,8 @@ function Logo() {
             <img
                 src={main}
                 alt="NTS Digital Solutions"
-                width="320"
-                height="213"
+                width="240"
+                height="120"
                 decoding="async"
                 className="h-auto w-20"
             />

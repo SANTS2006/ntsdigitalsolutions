@@ -11,7 +11,7 @@ const pillars = [
 ];
 
 const AboutHero = () => (
-  <section className="relative overflow-hidden bg-slate-950 text-white">
+  <section className="nts-page-hero relative overflow-hidden bg-white text-slate-950 dark:bg-black dark:text-white">
     <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(37,99,235,.22),transparent_32%),radial-gradient(circle_at_80%_30%,rgba(14,165,233,.12),transparent_28%)]" />
     <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-20 lg:grid-cols-[1.05fr_.95fr] lg:px-6 lg:py-28">
       <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .6 }}>
@@ -25,7 +25,7 @@ const AboutHero = () => (
       </motion.div>
       <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .7, delay: .1 }} className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
         {pillars.map(({ icon: Icon, title, text }) => (
-          <div key={title} className="rounded-2xl border border-white/10 bg-white/[.06] p-5 backdrop-blur-sm">
+          <div key={title} className="rounded-2xl border border-white/10 bg-white/[.06] p-5">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/15 text-blue-300"><Icon /></div>
             <h2 className="mt-4 font-bold">{title}</h2>
             <p className="mt-2 text-sm leading-6 text-slate-400">{text}</p>

@@ -20,25 +20,12 @@ function ProcessStep({
                 duration: 0.2
             }}
 
-            className="
-            bg-white
-            rounded-xl
-            border
-            border-slate-200
-            p-6
-            "
+            className="bg-white rounded-xl border border-slate-200 p-6"
 
         >
 
 
-            <div className="
-            rounded-full
-            text-white
-            flex
-            items-center
-            font-bold
-            mb-4
-            ">
+            <div className="rounded-full text-white flex items-center font-bold mb-4">
 
                 <Icon className="text-blue-500 text-2xl"/>
 
@@ -46,12 +33,7 @@ function ProcessStep({
 
 
 
-            <h3 className="
-            text-xl
-            font-semibold
-            text-slate-900
-            mb-3
-            ">
+            <h3 className="text-xl font-semibold text-slate-900 mb-3">
 
                 {title}
 
@@ -59,10 +41,7 @@ function ProcessStep({
 
 
 
-            <p className="
-            text-slate-600
-            leading-relaxed
-            ">
+            <p className="text-slate-600 leading-relaxed">
 
                 {description}
 

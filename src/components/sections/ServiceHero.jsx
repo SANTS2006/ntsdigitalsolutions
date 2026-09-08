@@ -4,8 +4,7 @@ import company from "../../data/company";
 import Button from "../ui/Button";
 
 const ServiceHero = () => (
-  <section className="relative overflow-hidden bg-slate-950 text-white">
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_15%,rgba(37,99,235,.25),transparent_32%),linear-gradient(135deg,rgba(15,23,42,1),rgba(2,6,23,1))]" />
+  <section className="nts-page-hero relative overflow-hidden bg-white text-slate-950 dark:bg-black dark:text-white">
     <div className="relative mx-auto max-w-7xl px-5 py-20 lg:px-6 lg:py-28">
       <div className="max-w-4xl">
         <p className="text-xs font-bold uppercase tracking-[.25em] text-blue-300">Services · Strategy · Engineering</p>

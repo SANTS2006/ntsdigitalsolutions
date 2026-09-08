@@ -3,17 +3,23 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-    --color-primary: #020617;
-    --color-secondary: #2563eb;
-    --color-accent: #10b981;
-    --color-background: #f8fafc;
-    --color-text: #1e293b;
+    --brand-dark: #062a8f;
+    --brand: #0756e8;
+    --brand-blue: #1769ff;
+    --brand-cyan: #08c7f5;
+    --brand-white: #ffffff;
+    --brand-soft: #eaf6ff;
+    --color-background: #ffffff;
+    --color-text: #0f172a;
+    --border-soft: #e2e8f0;
     color-scheme: light;
 }
 
 html {
     scroll-behavior: smooth;
     background: var(--color-background);
+    scrollbar-width: thin;
+    scrollbar-color: var(--brand-cyan) #eaf3ff;
 }
 
 body {
@@ -27,36 +33,175 @@ body {
     transition: background-color 180ms ease, color 180ms ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,h2,h3,h4,h5,h6 {
     font-family: "Manrope", "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
-button, a, input, select, textarea {
+button,a,input,select,textarea {
     -webkit-tap-highlight-color: transparent;
 }
 
 ::selection {
-    background: #2563eb;
+    background: var(--brand-cyan);
     color: #fff;
 }
 
-/* Theme-aware form controls and common surfaces. */
+/* =========================================================
+   NTS BLUE / WHITE BRAND SYSTEM
+   One shared gradient is used across buttons and premium
+   surfaces so the brand stays visually consistent.
+   ========================================================= */
+
+.text-brand-gold { color: var(--brand-cyan) !important; }
+.text-brand-dark { color: var(--brand-dark) !important; }
+.bg-brand-gold { background-color: var(--brand-cyan) !important; }
+
+.brand-gradient {
+    background: linear-gradient(135deg, #0637c9 0%, #0868f2 48%, #09c9f5 100%);
+}
+.brand-gradient:hover {
+    filter: brightness(1.06) saturate(1.08);
+}
+
+.brand-gradient-text {
+    background: linear-gradient(135deg, #0756e8 0%, #08c7f5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.brand-shadow {
+    box-shadow: 0 18px 42px rgba(7, 86, 232, .20);
+}
+
+.brand-tint {
+    background: rgba(8, 199, 245, .10);
+}
+
+.brand-glow {
+    background: rgba(23, 105, 255, .12);
+}
+
+.brand-panel-gradient {
+    background: linear-gradient(135deg, #041c69 0%, #0756e8 55%, #08c7f5 100%);
+}
+
+/* =========================================================
+   MODERN NTS HERO BEZEL
+   A crisp blue/cyan edge replaces the old neutral frame.
+   ========================================================= */
+
+.nts-bezel {
+    background: linear-gradient(
+        135deg,
+        #062a8f 0%,
+        #1769ff 38%,
+        #08c7f5 68%,
+        #ffffff 100%
+    );
+    box-shadow:
+        0 0 0 1px rgba(8, 199, 245, .18),
+        0 24px 70px rgba(7, 86, 232, .24),
+        inset 0 1px 0 rgba(255,255,255,.55);
+}
+
+.nts-bezel::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: 1.9rem;
+    pointer-events: none;
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.20),
+        transparent 28%,
+        transparent 70%,
+        rgba(8,199,245,.18)
+    );
+}
+
+.nts-bezel-inner {
+    position: relative;
+    min-height: 100%;
+    border: 1px solid rgba(255,255,255,.12);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.10),
+        inset 0 -1px 0 rgba(8,199,245,.10);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nts-bezel {
+        box-shadow: 0 0 0 1px rgba(8, 199, 245, .18);
+    }
+}
+
+/* =========================================================
+   CUSTOM NTS SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #edf6ff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #1769ff 0%, #08c7f5 100%);
+    border-radius: 999px;
+    border: 2px solid #edf6ff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #062a8f 0%, #08c7f5 100%);
+}
+
+::-webkit-scrollbar-corner {
+    background: #edf6ff;
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
 .dark {
     color-scheme: dark;
-    --color-background: #020617;
-    --color-text: #e2e8f0;
+    --color-background: #000000;
+    --color-text: #f8fafc;
+    --border-soft: #242424;
 }
 
 .dark body {
-    background: #020617;
-    color: #e2e8f0;
+    background: #000000;
+    color: #f8fafc;
 }
 
-.dark .bg-white { background-color: #0f172a; }
-.dark .bg-slate-50 { background-color: #0b1220; }
-.dark .bg-slate-100 { background-color: #111827; }
-.dark .bg-slate-200 { background-color: #1e293b; }
-.dark .bg-slate-300 { background-color: #334155; }
+.dark html {
+    background: #000000;
+    scrollbar-color: #08c7f5 #080808;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #080808;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #0756e8 0%, #08c7f5 100%);
+    border-color: #080808;
+}
+
+.dark ::-webkit-scrollbar-corner {
+    background: #080808;
+}
+
+/* Existing utility surfaces adapted to pure black dark mode. */
+.dark .bg-white { background-color: #080808; }
+.dark .bg-slate-50 { background-color: #050505; }
+.dark .bg-slate-100 { background-color: #0d0d0d; }
+.dark .bg-slate-200 { background-color: #171717; }
+.dark .bg-slate-300 { background-color: #222; }
 
 .dark .text-slate-950 { color: #f8fafc; }
 .dark .text-slate-900 { color: #f1f5f9; }
@@ -66,64 +211,258 @@ button, a, input, select, textarea {
 .dark .text-slate-500 { color: #64748b; }
 .dark .text-slate-400 { color: #94a3b8; }
 
-.dark .border-slate-200 { border-color: #263449; }
-.dark .border-slate-300 { border-color: #334155; }
-.dark .border-slate-100 { border-color: #1e293b; }
+.dark .border-slate-200 { border-color: #292929; }
+.dark .border-slate-300 { border-color: #3a3a3a; }
+.dark .border-slate-100 { border-color: #202020; }
 
-.dark .hover\:bg-slate-50:hover { background-color: #111827; }
-.dark .hover\:bg-slate-100:hover { background-color: #1e293b; }
+.dark .hover\:bg-slate-50:hover { background-color: #111; }
+.dark .hover\:bg-slate-100:hover { background-color: #1a1a1a; }
 .dark .hover\:text-slate-950:hover { color: #fff; }
 
 .dark input,
 .dark select,
 .dark textarea {
-    background-color: #0f172a;
+    background-color: #080808;
     color: #e2e8f0;
-    border-color: #334155;
+    border-color: #333;
 }
 
 .dark input::placeholder,
 .dark textarea::placeholder {
-    color: #64748b;
+    color: #666;
 }
 
 .dark select option {
-    background: #0f172a;
+    background: #080808;
     color: #e2e8f0;
 }
 
 .dark .shadow-xl,
 .dark .shadow-2xl {
-    --tw-shadow-color: rgb(0 0 0 / 0.35);
+    --tw-shadow-color: rgb(0 0 0 / .60);
 }
 
-/* Keep large brand-dark surfaces intentionally dark in both themes. */
-.dark .bg-slate-950 {
-    background-color: #020617;
+
+/* Neutral surface policy: light mode stays clean white; dark mode uses true black. */
+.bg-slate-800,
+.bg-slate-900 { background-color: #ffffff !important; }
+.dark .bg-slate-800,
+.dark .bg-slate-900 { background-color: #000000 !important; }
+
+/* =========================================================
+   BLUE COMPATIBILITY
+   Older components using Tailwind blue utilities inherit
+   the current NTS blue/cyan identity.
+   ========================================================= */
+
+.text-blue-600,
+.text-blue-500,
+.text-blue-700,
+.text-blue-400,
+.text-blue-300,
+.text-blue-200 {
+    color: var(--brand-blue) !important;
 }
 
-/* Prevent animated theme changes from affecting reduced-motion users. */
+.bg-blue-600,
+.bg-blue-500,
+.bg-blue-400 {
+    background-color: var(--brand-blue) !important;
+}
+
+.border-blue-500,
+.border-blue-400,
+.border-blue-300,
+.border-blue-200,
+.border-blue-100 {
+    border-color: rgba(23, 105, 255, .35) !important;
+}
+
+.bg-blue-50 {
+    background-color: rgba(8, 199, 245, .07) !important;
+}
+
+.bg-blue-100 {
+    background-color: rgba(8, 199, 245, .12) !important;
+}
+
+.shadow-blue-600\/20 {
+    --tw-shadow-color: rgba(7, 86, 232, .20) !important;
+}
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translate3d(0, 26px, 0);
+    transition:
+        opacity .7s cubic-bezier(.22,1,.36,1) var(--reveal-delay,0ms),
+        transform .7s cubic-bezier(.22,1,.36,1) var(--reveal-delay,0ms);
+    will-change: opacity, transform;
+}
+
+.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+
+.scroll-reveal:nth-child(2n) {
+    transform: translate3d(0, 32px, 0);
+}
+
+.scroll-reveal.is-visible:nth-child(2n) {
+    transform: translate3d(0,0,0);
+}
+
+.content-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 700px;
+}
+
 @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
         animation-duration: .01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: .01ms !important;
         scroll-behavior: auto !important;
     }
+
+    .scroll-reveal,
+    .scroll-reveal:nth-child(2n) {
+        opacity: 1;
+        transform: none;
+    }
 }
 
-.dark .bg-blue-50 { background-color: rgb(30 58 138 / 0.28); }
-.dark .bg-blue-100 { background-color: rgb(30 64 175 / 0.22); }
-.dark .bg-emerald-50 { background-color: rgb(6 78 59 / 0.28); }
-.dark .bg-red-50 { background-color: rgb(127 29 29 / 0.24); }
-.dark .text-emerald-800 { color: #a7f3d0; }
-.dark .border-emerald-200 { border-color: rgb(16 185 129 / 0.35); }
-.dark .border-red-200 { border-color: rgb(248 113 113 / 0.35); }
-.dark .border-blue-200 { border-color: rgb(96 165 250 / 0.35); }
+/* Fixed transparent navigation + video hero accessibility */
+header { will-change: transform; }
+@media (prefers-reduced-motion: reduce) {
+    .hero-video { display: none; }
+}
 
-/* Defer rendering work for content that is below the initial viewport. */
-.content-auto {
-    content-visibility: auto;
-    contain-intrinsic-size: auto 700px;
+
+/* =========================================================
+   NTS PAGE HERO GRADIENT
+   Non-home page heroes use one custom branded gradient.
+   Light mode stays bright and readable; dark mode becomes
+   deeper so white hero content remains highly visible.
+   ========================================================= */
+
+.nts-page-hero {
+    background:
+        radial-gradient(circle at 12% 18%, rgba(8, 199, 245, .18), transparent 30%),
+        radial-gradient(circle at 88% 22%, rgba(23, 105, 255, .20), transparent 34%),
+        linear-gradient(135deg, #f8fcff 0%, #eef7ff 45%, #e7f3ff 100%) !important;
+}
+
+.dark .nts-page-hero {
+    background:
+        radial-gradient(circle at 12% 18%, rgba(8, 199, 245, .16), transparent 30%),
+        radial-gradient(circle at 88% 22%, rgba(23, 105, 255, .24), transparent 34%),
+        linear-gradient(135deg, #020617 0%, #06153f 48%, #001d2b 100%) !important;
+}
+
+/* Light-mode hero copy: black is the default for maximum readability. */
+.nts-page-hero,
+.nts-page-hero h1,
+.nts-page-hero h2 {
+    color: #020617;
+}
+
+.dark .nts-page-hero,
+.dark .nts-page-hero h1,
+.dark .nts-page-hero h2 {
+    color: #ffffff;
+}
+
+/* Service hero uses the same contrast rules for supporting copy. */
+.nts-page-hero .text-slate-300 {
+    color: #334155;
+}
+.dark .nts-page-hero .text-slate-300 {
+    color: #cbd5e1;
+}
+
+
+
+/* =========================================================
+   SHARED PAGE HERO SPACING
+   Fixed navigation sits above the page, so every page hero
+   reserves generous space above and below its content.
+   ========================================================= */
+
+.nts-page-hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+}
+
+.nts-page-hero > div {
+    width: 100%;
+    padding-top: 9.5rem !important;
+    padding-bottom: 6.5rem !important;
+}
+
+@media (max-width: 767px) {
+    .nts-page-hero {
+        min-height: 390px;
+    }
+
+    .nts-page-hero > div {
+        padding-top: 8rem !important;
+        padding-bottom: 5.5rem !important;
+    }
+}
+
+/* =========================================================
+   NTS ROUTE LOADER
+   Branded spinner using the NTS logo instead of a generic
+   loading indicator.
+   ========================================================= */
+.nts-page-loader {
+    animation: nts-loader-fade-in 160ms ease-out both;
+}
+.nts-loader-ring {
+    animation: nts-loader-spin 1s linear infinite;
+}
+.nts-page-loader img {
+    max-width: 100%;
+}
+@keyframes nts-loader-spin {
+    to { transform: rotate(360deg); }
+}
+@keyframes nts-loader-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.skip-link {
+    position: fixed;
+    left: 1rem;
+    top: .75rem;
+    z-index: 200;
+    transform: translateY(-180%);
+    border-radius: .75rem;
+    background: #0756e8;
+    color: #fff;
+    padding: .75rem 1rem;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(7,86,232,.25);
+    transition: transform 160ms ease;
+}
+.skip-link:focus {
+    transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+    .nts-loader-ring,
+    .nts-page-loader {
+        animation: none;
+    }
 }

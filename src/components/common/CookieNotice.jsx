@@ -26,7 +26,7 @@ export default function CookieNotice() {
           }
           setShow(false);
         }}
-        className="mt-4 rounded-xl bg-slate-950 px-4 py-2 text-sm font-bold text-white"
+        className="mt-4 rounded-xl bg-white dark:bg-black px-4 py-2 text-sm font-bold text-white"
       >
         Got it
       </button>

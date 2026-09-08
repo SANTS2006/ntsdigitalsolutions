@@ -8,7 +8,6 @@ import DevelopmentProcess from '../components/sections/DevelopmentProcess';
 import SecuritySection from '../components/sections/SecuritySection';
 import InsightsPreview from '../components/sections/InsightsPreview';
 import Testimonials from '../components/sections/Testimonials';
-import Newsletter from '../components/sections/Newsletter';
 import Founder from '../components/sections/Founder';
 import CTA from '../components/sections/CTA';
 import SEO from '../components/common/SEO';
@@ -35,7 +34,6 @@ export default function Home() {
         <Testimonials />
         <InsightsPreview />
         <CTA />
-        <Newsletter />
       </div>
     </>
   );

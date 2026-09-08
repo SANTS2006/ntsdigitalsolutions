@@ -169,7 +169,7 @@ function ContactForm() {
 
                                 <a
                                     href="/"
-                                    className="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800"
+                                    className="inline-flex items-center gap-2 rounded-xl brand-gradient px-5 py-3 text-sm font-bold text-white shadow-lg brand-shadow transition hover:-translate-y-0.5"
                                 >
                                     <FiArrowLeft />
                                     Back to Home
@@ -253,7 +253,7 @@ function ContactForm() {
                                             "Please enter your email.",
                                     })}
                                     className={`${inputClass} mt-2`}
-                                    placeholder="Your email address"
+                                    placeholder="Enter your email"
                                 />
 
                                 {errors.email && (
@@ -272,7 +272,7 @@ function ContactForm() {
                                 <input
                                     {...register("phone")}
                                     className={`${inputClass} mt-2`}
-                                    placeholder="031034604"
+                                    placeholder="+232 31 034 604"
                                 />
                             </label>
 

@@ -10,17 +10,10 @@ function WhyWorkWithNTS() {
 
     return (
 
-        <section className="
-        py-20
-        bg-white
-        ">
+        <section className="py-20 bg-white">
 
 
-            <div className="
-            max-w-7xl
-            mx-auto
-            px-6
-            ">
+            <div className="max-w-7xl mx-auto px-6">
 
 
                 <SectionTitle
@@ -38,11 +31,7 @@ function WhyWorkWithNTS() {
 
 
 
-                <div className="
-                grid
-                md:grid-cols-2
-                gap-8
-                ">
+                <div className="grid md:grid-cols-2 gap-8">
 
 
                     {

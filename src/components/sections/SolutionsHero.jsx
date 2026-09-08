@@ -4,7 +4,7 @@ import company from "../../data/company";
 import Button from "../ui/Button";
 
 const SolutionsHero = () => (
-  <section className="relative overflow-hidden bg-slate-950 text-white">
+  <section className="nts-page-hero relative overflow-hidden bg-white text-slate-950 dark:bg-black dark:text-white">
     <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(37,99,235,.24),transparent_32%),radial-gradient(circle_at_90%_70%,rgba(14,165,233,.12),transparent_28%)]" />
     <div className="relative mx-auto max-w-7xl px-5 py-20 lg:px-6 lg:py-28">
       <div className="max-w-4xl">

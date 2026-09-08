@@ -5,37 +5,19 @@ function ChallengeSolution({
 
     return (
 
-        <div className="
-        grid
-        md:grid-cols-2
-        gap-8
-        ">
+        <div className="grid md:grid-cols-2 gap-8">
 
 
-            <div className="
-            bg-slate-50
-            rounded-xl
-            p-8
-            border
-            border-slate-200
-            ">
+            <div className="bg-slate-50 rounded-xl p-8 border border-slate-200">
 
-                <h3 className="
-                text-2xl
-                font-bold
-                text-slate-900
-                mb-4
-                ">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">
 
                     The Challenge
 
                 </h3>
 
 
-                <p className="
-                text-slate-600
-                leading-relaxed
-                ">
+                <p className="text-slate-600 leading-relaxed">
 
                     {challenge}
 
@@ -46,31 +28,17 @@ function ChallengeSolution({
 
 
 
-            <div className="
-            bg-blue-50
-            rounded-xl
-            p-8
-            border
-            border-blue-100
-            ">
+            <div className="bg-blue-50 rounded-xl p-8 border border-blue-100">
 
 
-                <h3 className="
-                text-2xl
-                font-bold
-                text-slate-900
-                mb-4
-                ">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">
 
                     Our Solution
 
                 </h3>
 
 
-                <p className="
-                text-slate-600
-                leading-relaxed
-                ">
+                <p className="text-slate-600 leading-relaxed">
 
                     {solution}
 

@@ -41,7 +41,7 @@ export default function SiteSearch() {
       </button>
 
       {open && (
-        <div className="fixed inset-0 z-[100] bg-slate-950/80 p-5 backdrop-blur-sm">
+        <div className="fixed inset-0 z-[100] bg-black/80 p-5">
           <div className="mx-auto mt-16 max-w-2xl overflow-hidden rounded-3xl bg-white shadow-2xl dark:bg-slate-900">
             <div className="flex items-center gap-3 border-b border-slate-200 p-5 dark:border-slate-800">
               <FiSearch className="text-slate-500" />

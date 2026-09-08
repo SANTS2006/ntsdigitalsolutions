@@ -1,34 +1,37 @@
+import { FiArrowRight, FiMessageSquare } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import Button from "../ui/Button";
 
 function IndustryCTA() {
+  return (
+    <section className="px-5 py-20 lg:px-6 lg:py-24">
+      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.25rem] border border-[rgba(8,199,245,.16)] bg-gradient-to-br from-[#fffaf5] via-[#f7efe6] to-[#eee3d7] px-7 py-12 shadow-xl shadow-[rgba(4,28,105,.06)] dark:border-white/10 dark:from-zinc-950 dark:via-[#17110d] dark:to-black md:px-12 md:py-14 lg:px-14">
+        <div className="absolute -right-28 -top-28 h-80 w-80 rounded-full bg-[rgba(8,199,245,.10)] blur-3xl" aria-hidden="true" />
+        <div className="absolute -bottom-32 -left-24 h-72 w-72 rounded-full bg-[rgba(4,28,105,.10)] blur-3xl" aria-hidden="true" />
 
-    return (
+        <div className="relative max-w-3xl">
+          <div className="inline-flex items-center gap-2 text-sm font-bold text-brand-cyan">
+            <FiMessageSquare aria-hidden="true" />
+            Have an industry challenge?
+          </div>
 
-        <section className=" py-20 bg-slate-50 ">
-            <div className="max-w-5xl mx-auto px-6  text-center ">
-                <h2 className=" text-3xl md:text-5xl font-bold" >
-                    Need a Solution For Your Industry?
-                </h2>
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-950 dark:text-white md:text-5xl">
+            Let’s build a digital solution for your organization.
+          </h2>
 
-                <p className=" mt-6  text-lg ">
-                    NTS Digital Solutions works with organizations
-                    to design and develop custom digital solutions
-                    that address their unique challenges.
-                </p>
+          <p className="mt-5 max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-300 md:text-lg">
+            Tell us about the challenge you’re facing, and we’ll help you identify a practical technology approach for your industry.
+          </p>
 
-                <div className=" mt-8 flex justify-center">
-
-                    <Link to="/contact">
-                        <Button>
-                            Discuss Your Project
-                        </Button>
-                    </Link>
-                </div>
-            </div>
-        </section>
-    );
+          <Link
+            to="/start-a-project"
+            className="brand-gradient mt-7 inline-flex items-center gap-2 rounded-xl px-6 py-3.5 font-bold text-white shadow-lg brand-shadow transition hover:-translate-y-1"
+          >
+            Start a Project <FiArrowRight aria-hidden="true" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
 }
-
 
 export default IndustryCTA;

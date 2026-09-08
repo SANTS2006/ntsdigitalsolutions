@@ -13,7 +13,7 @@ const ServicesList = () => (
           const Icon = service.icon;
           return (
             <motion.article key={service.title} whileHover={{ y: -3 }} className="group grid gap-7 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-xl md:grid-cols-[80px_1fr_auto] md:items-start md:p-8">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-950 text-2xl text-blue-300"><Icon /></div>
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-100 text-2xl text-brand-gold dark:bg-black"><Icon /></div>
               <div>
                 <div className="flex flex-wrap items-center gap-3"><span className="text-xs font-bold uppercase tracking-[.18em] text-blue-600">0{index + 1}</span><h2 className="text-2xl font-black text-slate-950">{service.title}</h2></div>
                 <p className="mt-3 max-w-3xl leading-7 text-slate-600">{service.description}</p>

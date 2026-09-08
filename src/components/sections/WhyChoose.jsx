@@ -4,7 +4,7 @@ import advantages from "../../data/advantages";
 
 function WhyChoose() {
     return (
-        <section className="bg-slate-950 py-24 text-white">
+        <section className="bg-white py-24 text-slate-950 dark:bg-black dark:text-white">
             <div className="mx-auto max-w-7xl px-5 lg:px-6">
                 <SectionTitle subtitle="Why NTS" title="A practical technology partner, not just a vendor" description="We care about the business problem behind the software. That means clearer communication, thoughtful architecture, and solutions people can actually use." />
                 <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">

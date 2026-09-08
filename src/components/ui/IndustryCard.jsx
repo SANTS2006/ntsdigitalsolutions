@@ -18,23 +18,13 @@ function IndustryCard({
                 duration: 0.2
             }}
 
-            className="
-            bg-white
-            rounded-2xl
-            p-8
-            border
-            border-slate-200
-            shadow-sm
-            "
+            className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm"
 
         >
 
             {/* Icon */}
 
-            <div className="
-            text-4xl
-            mb-6
-            ">
+            <div className="text-4xl mb-6">
                 <Icon className="text-blue-500" />
 
             </div>
@@ -42,11 +32,7 @@ function IndustryCard({
 
             {/* Title */}
 
-            <h3 className="
-            text-2xl
-            font-bold
-            text-slate-900
-            ">
+            <h3 className="text-2xl font-bold text-slate-900">
 
                 {industry.title}
 
@@ -55,11 +41,7 @@ function IndustryCard({
 
             {/* Description */}
 
-            <p className="
-            mt-4
-            text-slate-600
-            leading-relaxed
-            ">
+            <p className="mt-4 text-slate-600 leading-relaxed">
 
                 {industry.description}
 
@@ -69,10 +51,7 @@ function IndustryCard({
 
             {/* Solutions */}
 
-            <ul className="
-            mt-6
-            space-y-3
-            ">
+            <ul className="mt-6 space-y-3">
 
 
                 {
@@ -82,10 +61,7 @@ function IndustryCard({
 
                             key={solution}
 
-                            className="
-                            flex items-center gap-1
-                            text-slate-700
-                            "
+                            className="flex items-center gap-1 text-slate-700"
 
                         >
                             <FaCheckCircle className="text-blue-500" />

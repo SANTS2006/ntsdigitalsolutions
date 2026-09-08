@@ -13,7 +13,7 @@ function SolutionsPreview() {
                         <article key={solution.id} className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
                             <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
                                 <img src={solution.images[0]} alt={`${solution.title} interface`} loading="lazy" decoding="async" width="1280" height="800" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
-                                <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-slate-950/75 px-3 py-1 text-xs font-bold text-white backdrop-blur">0{index + 1} · {solution.category}</span>
+                                <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/75 px-3 py-1 text-xs font-bold text-white">0{index + 1} · {solution.category}</span>
                             </div>
                             <div className="p-6">
                                 <h3 className="text-xl font-bold text-slate-950">{solution.title}</h3>

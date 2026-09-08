@@ -32,7 +32,7 @@ const contactInfo = [
 
         title: "Phone",
 
-        value: "031034604",
+        value: "+232 31 034 604",
 
         icon: FaPhone
 

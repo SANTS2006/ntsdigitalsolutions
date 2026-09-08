@@ -112,7 +112,7 @@ export default function Support() {
             />
 
             {/* Hero */}
-            <section className="bg-slate-950 py-20 text-white">
+            <section className="nts-page-hero relative overflow-hidden bg-white text-slate-950 dark:bg-black dark:text-white">
                 <div className="mx-auto max-w-4xl px-5 text-center">
 
                     <p className="text-xs font-bold uppercase tracking-[.2em] text-blue-400">
@@ -174,7 +174,7 @@ export default function Support() {
 
                             <a
                                 href="/"
-                                className="mt-7 inline-flex rounded-xl bg-slate-950 px-6 py-3 font-bold text-white transition hover:bg-slate-800"
+                                className="mt-7 inline-flex rounded-xl brand-gradient px-6 py-3 font-bold text-white shadow-lg brand-shadow transition hover:-translate-y-0.5"
                             >
                                 Back to Home
                             </a>
@@ -265,7 +265,7 @@ export default function Support() {
                                         )
                                     }
                                     className={`${inputClass} mt-2`}
-                                    placeholder="Your email address"
+                                    placeholder="Enter your email"
                                 />
                             </label>
 
@@ -351,7 +351,7 @@ export default function Support() {
                                 <button
                                     type="submit"
                                     disabled={isSending}
-                                    className="inline-flex min-w-[170px] items-center justify-center gap-2 rounded-xl bg-slate-950 px-5 py-3 font-bold text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-70"
+                                    className="inline-flex min-w-[170px] items-center justify-center gap-2 rounded-xl brand-gradient px-5 py-3 font-bold text-white shadow-lg brand-shadow transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
                                 >
 
                                     {isSending ? (

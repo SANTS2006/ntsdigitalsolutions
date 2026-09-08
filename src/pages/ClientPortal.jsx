@@ -7,12 +7,13 @@ export default function ClientPortal() {
             <SEO
                 title="Client Portal | NTS Digital Solutions"
                 description="The NTS Digital Solutions client portal is currently under development."
+                noIndex
             />
 
-            <section className="min-h-[70vh] bg-slate-950 px-5 py-20 text-white">
+            <section className="min-h-[70vh] bg-white dark:bg-black px-5 py-20 text-white">
                 <div className="mx-auto flex max-w-2xl items-center justify-center">
 
-                    <div className="w-full rounded-3xl border border-white/10 bg-white/5 p-8 text-center shadow-2xl backdrop-blur-xl md:p-12">
+                    <div className="w-full rounded-3xl border border-white/10 bg-white/5 p-8 text-center shadow-2xl md:p-12">
 
                         {/* Icon */}
                         <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-400">

@@ -20,24 +20,14 @@ function SolutionsCard({
                 duration: 0.2
             }}
 
-            className="
-            bg-white
-            rounded-2xl
-            overflow-hidden
-            border
-            border-slate-200
-            shadow-sm
-            "
+            className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm"
 
         >
 
 
             {/* Image */}
 
-            <div className="
-            h-56
-            overflow-hidden
-            ">
+            <div className="h-56 overflow-hidden">
 
                 <img
 
@@ -47,11 +37,7 @@ function SolutionsCard({
 
                     loading="lazy"
 
-                    className="
-                    w-full
-                    h-full
-                    object-cover
-                    "
+                    className="w-full h-full object-cover"
 
                 />
 
@@ -61,18 +47,10 @@ function SolutionsCard({
 
             {/* Content */}
 
-            <div className="
-            p-6
-            ">
+            <div className="p-6">
 
 
-                <p className="
-                text-sm
-                font-semibold
-                text-blue-600
-                uppercase
-                tracking-wide
-                ">
+                <p className="text-sm font-semibold text-blue-600 uppercase tracking-wide">
 
                     {solution.category}
 
@@ -80,12 +58,7 @@ function SolutionsCard({
 
 
 
-                <h3 className="
-                mt-2
-                text-2xl
-                font-bold
-                text-slate-900
-                ">
+                <h3 className="mt-2 text-2xl font-bold text-slate-900">
 
                     {solution.title}
 
@@ -93,11 +66,7 @@ function SolutionsCard({
 
 
 
-                <p className="
-                mt-4
-                text-slate-600
-                leading-relaxed
-                ">
+                <p className="mt-4 text-slate-600 leading-relaxed">
 
                     {solution.description}
 
@@ -105,10 +74,7 @@ function SolutionsCard({
 
 
 
-                <ul className="
-                mt-5
-                space-y-2
-                ">
+                <ul className="mt-5 space-y-2">
 
 
                     {
@@ -117,11 +83,7 @@ function SolutionsCard({
 
                                 key={feature}
 
-                                className="
-                                text-slate-600
-                                flex items-center
-                                gap-2
-                                "
+                                className="text-slate-600 flex items-center gap-2"
 
                             >
 
@@ -140,12 +102,7 @@ function SolutionsCard({
 
 
 
-                <div className="
-                mt-6
-                flex
-                flex-wrap
-                gap-2
-                ">
+                <div className="mt-6 flex flex-wrap gap-2">
 
 
                     {
@@ -157,14 +114,7 @@ function SolutionsCard({
 
             key={tech}
 
-            className="
-            bg-slate-100
-            px-3
-            py-1
-            rounded-full
-            text-sm
-            text-slate-700
-            "
+            className="bg-slate-100 px-3 py-1 rounded-full text-sm text-slate-700"
 
         >
 
@@ -184,13 +134,7 @@ function SolutionsCard({
 
                     to={`/solutions/${solution.id}`}
 
-                    className="
-                    inline-block
-                    mt-6
-                    text-blue-600
-                    font-semibold
-                    hover:text-blue-700
-                    "
+                    className="inline-block mt-6 text-blue-600 font-semibold hover:text-blue-700"
 
                 >
 
