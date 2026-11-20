@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 function SolutionGallery({ images }) {
     return (
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className={`grid gap-6 ${images.length > 1 ? "md:grid-cols-2" : ""}`}>
             {images.map((image, index) => (
                 <motion.div
                     key={`${image}-${index}`}
@@ -19,7 +19,7 @@ function SolutionGallery({ images }) {
                         width="1280"
                         height="720"
                         alt={`Solution interface screenshot ${index + 1}`}
-                        className="h-full w-full object-contain"
+                        className="h-full w-full object-cover"
                     />
                 </motion.div>
             ))}
