@@ -1,3 +1,4 @@
+import HeroScene from '../components/ui/HeroScene';
 import SEO from '../components/common/SEO';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
@@ -112,7 +113,7 @@ export default function Support() {
             />
 
             {/* Hero */}
-            <section className="nts-page-hero relative overflow-hidden bg-white text-slate-950 dark:bg-black dark:text-white">
+            <section className="nts-page-hero relative overflow-hidden bg-white text-slate-950 dark:bg-black dark:text-white"><HeroScene />
                 <div className="mx-auto max-w-4xl px-5 text-center">
 
                     <p className="text-xs font-bold uppercase tracking-[.2em] text-blue-400">

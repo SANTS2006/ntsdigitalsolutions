@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./modern.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -404,7 +405,7 @@ button,a,input,select,textarea {
     align-items: center;
 }
 
-.nts-page-hero > div {
+.nts-page-hero > div:not(.nts-hero-scene) {
     width: 100%;
     padding-top: 9.5rem !important;
     padding-bottom: 6.5rem !important;
@@ -415,7 +416,7 @@ button,a,input,select,textarea {
         min-height: 390px;
     }
 
-    .nts-page-hero > div {
+    .nts-page-hero > div:not(.nts-hero-scene) {
         padding-top: 8rem !important;
         padding-bottom: 5.5rem !important;
     }

@@ -1,10 +1,11 @@
+import HeroScene from '../ui/HeroScene';
 import { FiArrowDown } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import company from "../../data/company";
 
 function ContactHero() {
     return (
-        <section className="nts-page-hero text-slate-950 dark:text-white">
+        <section className="nts-page-hero text-slate-950 dark:text-white"><HeroScene align="center" />
             <div className="mx-auto max-w-4xl px-5 text-center lg:px-6">
                 <p className="text-xs font-bold uppercase tracking-[.22em] text-brand-cyan">Start a conversation</p>
                 <h1 className="mt-4 text-4xl font-extrabold tracking-tight md:text-6xl">Let's build something useful.</h1>

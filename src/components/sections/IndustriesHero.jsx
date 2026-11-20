@@ -1,3 +1,4 @@
+import HeroScene from '../ui/HeroScene';
 import { FiArrowRight, FiBriefcase, FiHeart, FiHome, FiBookOpen } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import company from "../../data/company";
@@ -8,7 +9,7 @@ const focus = [
 ];
 
 const IndustriesHero = () => (
-  <section className="nts-page-hero relative overflow-hidden bg-white text-slate-950 dark:bg-black dark:text-white">
+  <section className="nts-page-hero relative overflow-hidden bg-white text-slate-950 dark:bg-black dark:text-white"><HeroScene />
     <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(37,99,235,.24),transparent_34%)]" />
     <div className="relative mx-auto max-w-7xl px-5 py-20 lg:px-6 lg:py-28">
       <div className="grid gap-12 lg:grid-cols-[1.1fr_.9fr] lg:items-center">

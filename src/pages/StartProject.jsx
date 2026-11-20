@@ -1,3 +1,4 @@
+import HeroScene from '../components/ui/HeroScene';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import SEO from '../components/common/SEO';
@@ -194,7 +195,7 @@ export default function StartProject() {
       />
 
       {/* Hero */}
-      <section className="nts-page-hero relative overflow-hidden bg-white text-slate-950 dark:bg-black dark:text-white">
+      <section className="nts-page-hero relative overflow-hidden bg-white text-slate-950 dark:bg-black dark:text-white"><HeroScene />
         <div className="mx-auto max-w-4xl px-5 text-center">
           <p className="text-xs font-bold uppercase tracking-[.2em] text-blue-400">
             Start a project
@@ -236,7 +237,7 @@ export default function StartProject() {
 
               <a
                 href="/"
-                className="mt-7 inline-flex rounded-xl bg-white dark:bg-black px-5 py-3 font-bold text-white transition hover:bg-slate-800"
+                className="mt-7 brand-gradient inline-flex rounded-xl px-5 py-3 font-bold text-white transition hover:-translate-y-0.5"
               >
                 Back to Home
               </a>

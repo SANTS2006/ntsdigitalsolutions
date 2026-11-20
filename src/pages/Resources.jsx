@@ -1,3 +1,4 @@
+import HeroScene from '../components/ui/HeroScene';
 import SEO from '../components/common/SEO';
 import { FiDownload, FiFileText } from 'react-icons/fi';
 import MobileAppDownload from '../components/sections/MobileAppDownload';
@@ -10,7 +11,7 @@ export default function Resources() {
         description="Useful resources, company information and the NTS Digital Solutions mobile app."
       />
 
-      <section className="nts-page-hero bg-white py-20 text-slate-950 dark:bg-black dark:text-white">
+      <section className="nts-page-hero bg-white py-20 text-slate-950 dark:bg-black dark:text-white"><HeroScene />
         <div className="mx-auto max-w-7xl px-5 lg:px-6">
           <p className="text-xs font-bold uppercase tracking-[.2em] text-blue-400">Resources</p>
           <h1 className="mt-4 text-4xl font-extrabold md:text-6xl">Helpful resources for your next digital project.</h1>

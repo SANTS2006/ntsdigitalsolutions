@@ -10,10 +10,10 @@ export default function ClientPortal() {
                 noIndex
             />
 
-            <section className="min-h-[70vh] bg-white dark:bg-black px-5 py-20 text-white">
+            <section className="min-h-[70vh] bg-white px-5 py-20 text-slate-950 dark:bg-black dark:text-white">
                 <div className="mx-auto flex max-w-2xl items-center justify-center">
 
-                    <div className="w-full rounded-3xl border border-white/10 bg-white/5 p-8 text-center shadow-2xl md:p-12">
+                    <div className="w-full rounded-3xl border border-slate-300 bg-slate-50 p-8 text-center shadow-2xl dark:border-white/10 dark:bg-white/5 md:p-12">
 
                         {/* Icon */}
                         <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-400">
@@ -47,7 +47,7 @@ export default function ClientPortal() {
                         {/* Features */}
                         <div className="mx-auto mt-8 max-w-lg rounded-2xl border border-white/10 bg-white/5 p-5 text-left">
 
-                            <p className="mb-4 text-sm font-bold text-white">
+                            <p className="mb-4 text-sm font-bold text-slate-950 dark:text-white">
                                 Planned portal capabilities
                             </p>
 

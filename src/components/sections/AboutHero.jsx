@@ -1,3 +1,4 @@
+import HeroScene from '../ui/HeroScene';
 import { motion } from "framer-motion";
 import { FiArrowRight, FiShield, FiZap, FiTarget } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -11,7 +12,7 @@ const pillars = [
 ];
 
 const AboutHero = () => (
-  <section className="nts-page-hero relative overflow-hidden bg-white text-slate-950 dark:bg-black dark:text-white">
+  <section className="nts-page-hero relative overflow-hidden bg-white text-slate-950 dark:bg-black dark:text-white"><HeroScene />
     <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(37,99,235,.22),transparent_32%),radial-gradient(circle_at_80%_30%,rgba(14,165,233,.12),transparent_28%)]" />
     <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-20 lg:grid-cols-[1.05fr_.95fr] lg:px-6 lg:py-28">
       <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .6 }}>

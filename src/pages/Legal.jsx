@@ -1,3 +1,4 @@
+import HeroScene from '../components/ui/HeroScene';
 import { Link } from 'react-router-dom';
 import SEO from '../components/common/SEO';
 
@@ -203,7 +204,7 @@ export default function Legal({ type }) {
     <>
       <SEO title={`${doc.title} | NTS Digital Solutions`} description={doc.seoDescription} />
 
-      <section className="nts-page-hero bg-white py-20 text-slate-950 dark:bg-black dark:text-white">
+      <section className="nts-page-hero bg-white py-20 text-slate-950 dark:bg-black dark:text-white"><HeroScene />
         <div className="mx-auto max-w-4xl px-5">
           <p className="text-xs font-bold uppercase tracking-[.2em] text-blue-400">NTS Digital Solutions</p>
           <h1 className="mt-4 text-4xl font-extrabold md:text-6xl">{doc.title}</h1>

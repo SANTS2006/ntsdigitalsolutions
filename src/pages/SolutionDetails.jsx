@@ -1,3 +1,4 @@
+import HeroScene from '../components/ui/HeroScene';
 import { FiArrowLeft, FiCheckCircle, FiExternalLink, FiLayers } from "react-icons/fi";
 import { Link, useParams } from "react-router-dom";
 import solutions from "../data/solutions";
@@ -15,7 +16,7 @@ function SolutionDetails() {
 
     return <>
         <SEO title={`${solution.title} | NTS Digital Solutions`} description={solution.description} />
-        <section className="nts-page-hero bg-white py-24 text-slate-950 dark:bg-black dark:text-white">
+        <section className="nts-page-hero bg-white py-24 text-slate-950 dark:bg-black dark:text-white"><HeroScene />
             <div className="mx-auto max-w-7xl px-5 lg:px-6">
                 <Link to="/solutions" className="inline-flex items-center gap-2 text-sm font-semibold text-slate-400 hover:text-white"><FiArrowLeft /> All solutions</Link>
                 <div className="mt-12 max-w-4xl"><p className="text-xs font-bold uppercase tracking-[.22em] text-brand-gold">{solution.category}</p><h1 className="mt-4 text-4xl font-extrabold tracking-tight md:text-6xl">{solution.title}</h1><p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">{solution.description}</p><a href={solution.liveUrl} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-bold text-white transition hover:bg-blue-700">Visit {solution.title} <FiExternalLink /></a></div>
