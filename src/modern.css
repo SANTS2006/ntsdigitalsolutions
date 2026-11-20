@@ -314,3 +314,21 @@ html:not(.dark) .nts-page-hero .hover\:bg-white\/10:hover { background: rgba(7, 
 @media (max-width: 640px) {
     .hs-stage { right: -26vw; top: 56%; width: 96vw; height: 96vw; opacity: .3; }
 }
+
+/* =========================================================
+   PAGE WIDTH
+   Page content spans 85% of the viewport on tablet and up.
+   On phones the existing side gutters already give ~90%.
+   ========================================================= */
+@media (min-width: 768px) {
+    .max-w-7xl,
+    .nts-page-hero > div.max-w-7xl:not(.nts-hero-scene) {
+        width: 85%;
+        max-width: none;
+    }
+
+    /* Panels nested in a padded section: 85% of the viewport, not of the padded box. */
+    section[class*="px-5"] > .max-w-7xl {
+        width: min(85vw, 100%);
+    }
+}
