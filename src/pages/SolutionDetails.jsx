@@ -1,3 +1,4 @@
+import NotFound from './NotFound';
 import HeroScene from '../components/ui/HeroScene';
 import { FiArrowLeft, FiCheckCircle, FiExternalLink, FiLayers } from "react-icons/fi";
 import { Link, useParams } from "react-router-dom";
@@ -12,7 +13,7 @@ function SolutionDetails() {
     const { id } = useParams();
     const solution = solutions.find((item) => item.id === id);
 
-    if (!solution) return <section className="px-5 py-32 text-center"><h1 className="text-4xl font-extrabold">Solution not found</h1><Link className="mt-6 inline-block font-bold text-blue-600" to="/solutions">Back to solutions</Link></section>;
+    if (!solution) return <NotFound />;
 
     return <>
         <SEO title={`${solution.title} | NTS Digital Solutions`} description={solution.description} />
